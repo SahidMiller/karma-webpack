@@ -104,7 +104,7 @@ function Plugin(
     webpackOptions.output.publicPath = `/_karma_webpack_${publicPath}/`;
 
     if (includeIndex) {
-      webpackOptions.output.jsonpFunction = `webpackJsonp${index}`;
+      webpackOptions.output.chunkLoadingGlobal = `webpackJsonp${index}`;
     }
 
     // Enforce that the output filename is dynamic and doesn't contain chunkhashes
